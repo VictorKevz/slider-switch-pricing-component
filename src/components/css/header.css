@@ -1,0 +1,29 @@
+
+.header-container{
+    width: 100%;
+    background-image: url("../../assets/images/pattern-circles.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease-in-out;
+    margin-top: 10.8rem;
+    margin-bottom: 5.28rem;
+    height: 146px;
+    text-align: center;
+}
+.header-title{
+    font-weight: 800;
+    font-size: 2.808rem;
+    margin-bottom: .96rem;
+    color: var(--dark-desaturated-blue);
+   
+}
+.header-paragraph{
+    font-size: 1.52rem;
+    font-weight: 400;
+    letter-spacing: .012rem;
+    transition: all .3s ease-in-out;
+}

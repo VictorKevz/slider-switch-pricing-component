@@ -1,0 +1,88 @@
+.toggle-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 5.4rem;
+    padding: 0 4.8rem 4.4rem 4.8rem;
+    border-bottom: 1px solid var(--light-grayish-blue-slider);
+  }
+  
+  .toggle-text {
+    letter-spacing: .032rem;
+    font-weight: 400;
+    font-size: 1.2rem;
+    transition: all .25s ease-in-out;
+  }
+  .green{
+    color: var(--strong-cyan);
+  }
+  .discount{
+    width: 79px;
+    height: 18px;
+    margin-right: 1.8rem;
+    margin-left: .9rem;
+    color: var(--light-red);
+    background-color: var(--light-grayish-red);
+    font-size: .96rem;
+    font-weight: 600;
+    border-radius: .96rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .toggle-container {
+    position: relative;
+    width: 48px;
+    height: 22px;
+    transition: .4s;
+    margin: 0 1.6rem;
+
+  }
+  
+  .toggle-input {
+    opacity: 0;
+    width: 43px;
+    height: 22px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    cursor: pointer;
+  }
+  
+  .toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--light-grayish-blue-toggle);
+    cursor: pointer;
+    border-radius: 22px;
+    transition: background-color 0.3s;
+  }
+  
+  .toggle-label::before {
+    content: "";
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+  }
+  
+  .toggle-input:checked + .toggle-label {
+    background: var(--strong-cyan);
+  }
+  
+  .toggle-input:checked + .toggle-label::before {
+    transform: translateX(20px);
+  }
+  
+  .toggle-container:hover .toggle-label {
+    background: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    transition: .4s;
+  }

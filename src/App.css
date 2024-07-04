@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+  /* Primary */
+  --soft-cyan: hsl(174, 77%, 80%);
+  --strong-cyan: hsl(174, 86%, 45%);
+  --light-grayish-red: hsl(14, 92%, 95%);
+  --light-red: hsl(15, 100%, 70%);
+  --pale-blue: hsl(226, 100%, 87%);
+  
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --very-pale-blue: hsl(230, 100%, 99%);
+  --light-grayish-blue-slider: hsl(224, 65%, 95%);
+  --light-grayish-blue-toggle: hsl(223, 50%, 87%);
+  --grayish-blue: hsl(225, 20%, 60%);
+  --dark-desaturated-blue: hsl(227, 35%, 25%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: var(--very-pale-blue);
+  color: var(--grayish-blue);
+  width: 100%;
+  height: 100%;
+}
+.outer-container {
+  display: flex;
+  min-height: 800px;
+  justify-content: center;
+  /* align-items: center; */
+  width: 100%;
+  position: relative;
+}
+.inner-container {
+  max-width: 1440px;
+  width: 100%;
+  height: 100vh;
+  padding: 0 11.4%;
+}
+.header-bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/images/bg-pattern.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100vw 56.1vh;
+  z-index: -1;
+}
+@media (width <= 620px) {
+  .inner-container{
+    padding: 0 3% 3% 3%;
+  }
+}
+@media (width <= 499px) {
+ 
+  .card-container{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .slider.desktop,.slider-wrapper{
+    display: none;
+  }
+  .slider-wrapper.mobile,.slider.mobile{
+    display: flex;
+    width: 100%;
+    margin: 3rem 0;
+  }
+  .slider-results-container{
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    
+  }
+  .slider-container{
+    padding: 0 2.8rem;
+ 
+  }
+  
+  .toggle-wrapper{
+    justify-content: center;
+    text-align: center;
+  }
+  .features-CTA-container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+  }
+  .feature-icon-container{
+    align-items: center;
+  }
+  .conditional{
+    display: none;
+  }
+}
